@@ -5,7 +5,10 @@
 struct SemiTruck : public Vehicle
 {
     SemiTruck(const std::string& s);
+    ~SemiTruck() override;
+    SemiTruck(const SemiTruck&);
+    SemiTruck& operator = (const SemiTruck&);
     void pullOver();
-    void setSpeed( int s );
+    void checkSpeed( int s );
 };
 

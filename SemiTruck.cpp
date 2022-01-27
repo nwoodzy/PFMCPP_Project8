@@ -1,6 +1,12 @@
 #include "SemiTruck.h"
 
 SemiTruck::SemiTruck(const std::string& n) : Vehicle(n) {}
+SemiTruck::~SemiTruck() = default;
+
+SemiTruck::SemiTruck(const SemiTruck&) = default;
+
+SemiTruck& SemiTruck::operator=(const SemiTruck&) = default;
+
 
 void SemiTruck::pullOver()
 {
@@ -8,7 +14,7 @@ void SemiTruck::pullOver()
     std::cout << name << ": hello officer, what seems to be the problem?" << std::endl;
 }
 
-void SemiTruck::setSpeed(int s)
+void SemiTruck::checkSpeed(int s)
 {
     if (s > 65)
     {

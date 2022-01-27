@@ -54,6 +54,7 @@ your task:
 #include "Motorcycle.h"
 #include "HighwayPatrol.h"
 #include "SemiTruck.h"
+#include "Highway.h"
 
 
 /*
@@ -125,28 +126,28 @@ int main()
     /*
      now reserve and emplace_back your Trucks and Motorcyles
      */
-    motorcycles.reserve(2);
-    
+    motorcycles.reserve(3);
     motorcycles.emplace_back("fast");
     motorcycles.emplace_back("slow");
+    motorcycles.emplace_back("medium");
 
-    trucks.reserve(2);
-
+    trucks.reserve(3);
     trucks.emplace_back("wanda");
     trucks.emplace_back("biff");
+    trucks.emplace_back("cha");
     
     
-    assert(false);
+    //assert(false);
     //add the cars, motorcycles and trucks to the highway using range-based for() loops: for( element : vec ) { ... }
-    for (Car& car : cars)
+    for (auto& car: cars)
     {
         highway.addVehicle(&car);
     }
-    for (Motorcycle& moto : motorcycles)
+    for (auto& moto: motorcycles)
     {
         highway.addVehicle(&moto);
     }
-    for (SemiTruck& semi : trucks)
+    for (auto& semi: trucks)
     {
         highway.addVehicle(&semi);
     }
