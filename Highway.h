@@ -4,8 +4,11 @@
 #include <algorithm>
 #include "Vehicle.h"
 
+struct HighwayPatrol;
+
 struct Highway
 {
+    friend HighwayPatrol;
     void changeSpeed(int newSpeed);
     void addVehicle(Vehicle* v);
     void removeVehicle(Vehicle* v);

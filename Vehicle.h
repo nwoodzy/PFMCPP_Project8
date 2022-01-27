@@ -3,10 +3,12 @@
 #include <string>
 #include <iostream>
 
+struct HighwayPatrol;
+
 struct Vehicle
 {
     Vehicle(const std::string& n) : name(n) { }
-    
+    friend HighwayPatrol;
     //Special member Functions.  See instruction 9) and note in main()
     virtual ~Vehicle() = default;
     Vehicle(const Vehicle&) = default;
