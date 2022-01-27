@@ -2,9 +2,9 @@
 
 #include <vector>
 #include <algorithm>
-#include "Vehicle.h"
 
 struct HighwayPatrol;
+struct Vehicle;
 
 struct Highway
 {
